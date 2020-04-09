@@ -51,4 +51,18 @@ public class LopHoc {
       qlDsGVGD.inDS();
       return 1;
     }
+    // xoa sinh vien
+    public int xoaHS(String ten) {
+        if (qlDsHS.xoa(ten) == 1) {
+          return 1;
+        }
+        return 0;
+    }
+    // xoa giao vien
+    public int xoaGVGD(String ten) {
+        if (qlDsGVGD.xoa(ten) == 1) {
+          return 1;
+        }
+        return 0;
+    }
 }
