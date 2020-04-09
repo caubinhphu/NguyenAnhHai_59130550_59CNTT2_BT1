@@ -43,13 +43,15 @@ public class LopHoc {
     }
     // in danh sach hoc sinh
     public int inDSHS() {
-      qlDsHS.inDS();
-      return 1;
+        System.out.println("Danh sach hoc sinh:");
+        qlDsHS.inDS();
+        return 1;
     }
     // in danh sach giao vien giang day
     public int inDSGVGD() {
-      qlDsGVGD.inDS();
-      return 1;
+        System.out.println("Danh sach giao vien giang day:");
+        qlDsGVGD.inDS();
+        return 1;
     }
 //    // xoa sinh vien
 //    public int xoaHS(String ten) {
