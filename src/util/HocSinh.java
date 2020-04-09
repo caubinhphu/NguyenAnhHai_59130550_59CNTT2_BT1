@@ -9,7 +9,7 @@ package util;
  *
  * @author Hai Tran Do
  */
-public class HocSinh extends CaNhan{
+public class HocSinh extends CaNhan {
      // attributes
     private String lop;
     private String nangKhieu;
