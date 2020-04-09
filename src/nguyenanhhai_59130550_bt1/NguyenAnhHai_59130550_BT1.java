@@ -111,16 +111,16 @@ public class NguyenAnhHai_59130550_BT1 {
         // in danh sach giao vien giang day
         lopHoc.inDSGVGD();
 
-        // xoa sinh vien co ten x khoi lop hoc
-        lopHoc.xoaHS("Nguyen Sinh Hai");
-
-        // xoa giao vien co ten x khoi lop hoc
-        lopHoc.xoaGVGD("Nguyen Giao Mot");
-
-        // in danh sach hos sinh trong lop
-        lopHoc.inDSHS();
-
-        // in danh sach giao vien giang day
-        lopHoc.inDSGVGD();
+//        // xoa sinh vien co ten x khoi lop hoc
+//        lopHoc.xoaHS("Nguyen Sinh Hai");
+//
+//        // xoa giao vien co ten x khoi lop hoc
+//        lopHoc.xoaGVGD("Nguyen Giao Mot");
+//
+//        // in danh sach hos sinh trong lop
+//        lopHoc.inDSHS();
+//
+//        // in danh sach giao vien giang day
+//        lopHoc.inDSGVGD();
     }
 }
