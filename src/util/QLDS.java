@@ -16,6 +16,11 @@ public class QLDS implements IQLDS {
     // attributes
     private ArrayList<CaNhan> dsCaNhan = new ArrayList<>();
 
+    // constructor
+    public QLDS(ArrayList<CaNhan> dsCaNhan) {
+        this.dsCaNhan = dsCaNhan;
+    }
+    
     // methods
     // them ca nhan
     @Override
@@ -27,7 +32,7 @@ public class QLDS implements IQLDS {
     // xoa ca nhan
     @Override
     public int xoa(String ten) {
-      if (dsCaNhan.removeIf(cn -> cn.hoTen == ten)) {
+      if (dsCaNhan.removeIf(cn -> cn.hoTen.equals(ten))) {
         return 1;
       }
       return 0;
@@ -36,6 +41,6 @@ public class QLDS implements IQLDS {
     // in ds ca nhan
     @Override
     public void inDS() {
-      dsCaNhan.forEach(cn -> cn.hienThiTT());
+      dsCaNhan.forEach(cn -> System.out.println(cn.hienThiTT()));
     }
 }

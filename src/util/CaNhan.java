@@ -43,5 +43,6 @@ public abstract class CaNhan {
     public String getSdt() { return this.sdt; }
 
     // abtract methods
+    // hien thi thong tin
     public abstract String hienThiTT();
 }

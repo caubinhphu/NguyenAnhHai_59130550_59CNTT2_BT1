@@ -42,7 +42,7 @@ public class GiaoVien extends CaNhan {
       thongTin = "ho ten: " + this.hoTen + ", tuoi: " + this.tuoi + ", dia chi: " + this.diaChi
         + ", sdt: " + this.sdt + ", mon day: " + this.monDay + ", to bo mon: " + this.toBoMon;
   
-      System.out.println(thongTin);
+//      System.out.println(thongTin);
       return thongTin;
     }
 }

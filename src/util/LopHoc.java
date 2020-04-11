@@ -6,6 +6,7 @@
 package util;
 
 import interfaces.IQLDS;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,18 +15,40 @@ import interfaces.IQLDS;
 public class LopHoc {
     // attributes
     // giao vien chu nhiem
-    CaNhan giaoVienCN = new GiaoVien();
-    // danh sach giao vien giang day cua lop
-    IQLDS qlDsGVGD = new QLDS();
+    private GiaoVien giaoVienCN = null;
     // danh sach hoc sinh trong lop
-    IQLDS qlDsHS = new QLDS();
+    private ArrayList<CaNhan> dsHocSinh = null;
+    // danh sach giao vien giang day cua lop
+    private ArrayList<CaNhan> dsGVGD = null;
+    
+    // quan ly hoc sinh
+    private IQLDS qlDsGVGD = null;
+    // quan ly danh sach giao vien
+    private IQLDS qlDsHS = null;
 
     // conrtructor
+    // no params
+    public  LopHoc() {
+        this.giaoVienCN = new GiaoVien();
+        this.dsHocSinh = new ArrayList<>();
+        this.dsGVGD = new ArrayList<>();
+        this.qlDsHS = new QLDS(dsHocSinh);
+        this.qlDsGVGD = new QLDS(dsGVGD);
+    }
     // contructor LopHoc voi giao vien chu nhiem truyen vao
     public LopHoc(GiaoVien gvChuNhiem) {
-      this.giaoVienCN = gvChuNhiem;
+        this.giaoVienCN = gvChuNhiem;
+        this.dsHocSinh = new ArrayList<>();
+        this.dsGVGD = new ArrayList<>();
+        this.qlDsHS = new QLDS(dsHocSinh);
+        this.qlDsGVGD = new QLDS(dsGVGD);
     }
 
+    // getter, setter
+    public void setGiaoVienCN(GiaoVien giaoVienCN) { this.giaoVienCN = giaoVienCN; } 
+    public GiaoVien getGiaoVienCN() { return giaoVienCN; }
+    
+    
     // methods
     // them hoc sinh
     public int themHocSinh(HocSinh hs) {
@@ -45,12 +68,18 @@ public class LopHoc {
     public int inDSHS() {
         System.out.println("Danh sach hoc sinh:");
         qlDsHS.inDS();
+//        for(CaNhan hs : dsHocSinh) {
+//            System.out.println(hs.hienThiTT());
+//        }
         return 1;
     }
     // in danh sach giao vien giang day
     public int inDSGVGD() {
         System.out.println("Danh sach giao vien giang day:");
         qlDsGVGD.inDS();
+//        for (CaNhan gv : dsGVGD) {
+//            System.out.println(gv.hienThiTT());
+//        }
         return 1;
     }
 //    // xoa sinh vien
